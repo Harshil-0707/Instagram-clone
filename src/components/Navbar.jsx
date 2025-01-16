@@ -10,6 +10,7 @@ import {
   Message,
   Reels,
   Explore,
+  Threads,
 } from "../assets";
 
 export default function Navbar() {
@@ -25,7 +26,7 @@ export default function Navbar() {
   ]);
   const [navLinkTwo, __] = React.useState([
     { img: Home, text: "AI Studio" },
-    { img: Home, text: "Threads" },
+    { img: Threads, text: "Threads" },
     { img: Menu, text: "More" },
   ]);
   return (
@@ -36,7 +37,7 @@ export default function Navbar() {
         </div>
         <div className="h-full flex flex-col justify-between">
           <div className="flex flex-col max-[783px]:hidden">
-            {navLinkOne.map((nav) => {
+            {navLinkOne.map((nav, index) => {
               return (
                 <NavLink
                   key={nav.text}
@@ -47,7 +48,13 @@ export default function Navbar() {
                     alt="img"
                     className="pl-3 pr-4 max-xl:px-2"
                   />
-                  <span className="max-xl:hidden">{nav.text}</span>
+                  <span
+                    className={`max-xl:hidden ${
+                      index === 0 ? "font-bold" : "font-normal"
+                    }`}
+                  >
+                    {nav.text}
+                  </span>
                 </NavLink>
               );
             })}

@@ -18,7 +18,7 @@ export default function Posts() {
         return (
           <div
             key={acc.id}
-            className="w-[min(470px,100vw)] pb-6 border-b-[1px] ml-5 border-[#2d2d2d]"
+            className="w-[min(470px,100vw)] pb-4 border-b-[1px] ml-5 border-[#2d2d2d]"
           >
             <div className="flex justify-between items-center mb-2">
               <div className="flex items-center">
@@ -33,7 +33,7 @@ export default function Posts() {
               <div className="font-bold tracking-widest">...</div>
             </div>
             <div className="h-[40rem] border-[1px] border-[#2d2d2d] rounded-[4px] mb-4"></div>
-            <div className="flex justify-between">
+            <div className="flex justify-between mb-8">
               <div className="flex gap-x-[1.2rem]">
                 <img src={Heart} alt="like" />
                 <img src={Comment} alt="comment" />
@@ -42,6 +42,12 @@ export default function Posts() {
               <div>
                 <img src={Save} alt="Save" />
               </div>
+            </div>
+            <div className="flex justify-between items-center">
+              <div className="text-[13px] text-[rgb(168,168,168)]">
+                Add a comment...
+              </div>
+              <div className="text-xl text-[rgb(168,168,168)]">☺</div>
             </div>
           </div>
         );

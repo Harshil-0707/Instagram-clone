@@ -10,7 +10,8 @@ import Create from "./Create.svg";
 import Comment from "./Comment.svg";
 import Message from "./Message.svg";
 import Explore from "./Explore.svg";
+import Threads from "./Threads.svg";
 import AIStudio from "./AIStudio.svg";
 import EndOfPost from "./EndOfPost.png"
 
-export { Home, Name, Search, Save, Share, Comment, Reels, Message, Menu, AIStudio, Heart, Create, Explore, EndOfPost };
+export { Home, Name, Search, Save, Share, Comment, Reels, Message, Menu, AIStudio, Heart, Create, Explore, EndOfPost, Threads };
