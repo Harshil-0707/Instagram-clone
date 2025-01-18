@@ -11,6 +11,7 @@ import {
   Reels,
   Explore,
   Threads,
+  InstagramIcon,
 } from "../assets";
 
 export default function Navbar() {
@@ -31,12 +32,13 @@ export default function Navbar() {
   ]);
   return (
     <>
-      <div className="sticky top-0 border-r-[1px] max-[783px]:border-0 h-[100vh] flex flex-col gap-y-5 pt-10 px-3 pb-9 border-[#51515187] w-[21%] max-xl:w-20 max-[783px]:fixed  max-[783px]:bottom-0 max-[783px]:flex-row">
-        <div className="mb-2 px-4 max-[783px]:hidden">
-          <img src={Name} alt="name w-20 h-20" />
+      <div className="md:sticky md:top-0 md:border-r-[1px] md:h-[100vh] max-md:h-30 flex flex-row fixed bottom-0 md:flex-col gap-y-5 md:pt-10 px-3 md:pb-9 border-[#51515187] w-[21%] max-xl:w-20 max-md:w-full max-xl:items-center max-xl:justify-evenly">
+        <div className="mb-2 px-4">
+          <img src={Name} alt="icon" className="block max-xl:hidden" />
+          <img src={InstagramIcon} alt="icon" className="hidden max-xl:block" />
         </div>
-        <div className="h-full flex flex-col justify-between">
-          <div className="flex flex-col max-[783px]:hidden">
+        <div className="h-full flex flex-col justify-between  max-md:flex-row">
+          <div className="flex flex-col max-md:flex-row">
             {navLinkOne.map((nav, index) => {
               return (
                 <NavLink
@@ -59,7 +61,7 @@ export default function Navbar() {
               );
             })}
           </div>
-          <div className="flex flex-col max-[783px]:hidden">
+          <div className="flex flex-col max-md:flex-row max-md:items-center">
             {navLinkTwo.map((nav) => {
               return (
                 <NavLink

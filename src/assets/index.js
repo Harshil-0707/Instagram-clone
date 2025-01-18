@@ -13,5 +13,6 @@ import Explore from "./Explore.svg";
 import Threads from "./Threads.svg";
 import AIStudio from "./AIStudio.svg";
 import EndOfPost from "./EndOfPost.png"
+import InstagramIcon from "./InstagramIcon.svg"
 
-export { Home, Name, Search, Save, Share, Comment, Reels, Message, Menu, AIStudio, Heart, Create, Explore, EndOfPost, Threads };
+export { Home, Name, Search, Save, Share, Comment, Reels, Message, Menu, AIStudio, Heart, Create, Explore, EndOfPost, Threads, InstagramIcon };

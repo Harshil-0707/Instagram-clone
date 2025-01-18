@@ -3,7 +3,7 @@ import { Heart, Comment, Share, Save, EndOfPost } from "../assets";
 
 export default function Posts() {
   const [post, setPost] = React.useState([
-    { id: 1, name: "Harshil" },
+    { id: 1, name: "Developer" },
     { id: 2, name: "Nothing" },
     { id: 3, name: "Samsung" },
     { id: 4, name: "Instagram" },
@@ -18,12 +18,12 @@ export default function Posts() {
         return (
           <div
             key={acc.id}
-            className="w-[min(470px,100vw)] pb-4 border-b-[1px] ml-5 border-[#2d2d2d]"
+            className="w-[min(470px,100vw)] pb-4 border-b-[1px] ml-5 border-[#2d2d2d] hover:cursor-pointer"
           >
             <div className="flex justify-between items-center mb-2">
               <div className="flex items-center">
                 <div className="h-[38px] relative w-[38px] mb-1 rounded-full bg-slate-200 border-[2px] border-black">
-                  <div className="absolute h-[41px] w-[41px] -z-10 top-[-3px] left-[-3px] rounded-full bg-gradient-to-r from-pink-500 via-red-500 to-orange-500"></div>
+                  <div className="absolute h-[41px] w-[41px] -z-10 top-[-3px] left-[-3px] rounded-full bg-gradient-to-r from-pink-500 via-purple-500 to-orange-500" />
                 </div>
                 <div className="ml-3">
                   <div className="text-sm font-semibold">{acc.name}</div>
