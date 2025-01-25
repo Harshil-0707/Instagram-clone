@@ -18,9 +18,9 @@ export default function Posts() {
         return (
           <div
             key={acc.id}
-            className="w-[min(470px,100vw)] pb-4 border-b-[1px] ml-5 border-[#2d2d2d] hover:cursor-pointer"
+            className="w-[min(470px,100vw)] pb-4 border-b-[1px] border-[#2d2d2d] hover:cursor-pointer"
           >
-            <div className="flex justify-between items-center mb-2">
+            <div className="flex justify-between items-center mb-2 max-[488px]:mx-3">
               <div className="flex items-center">
                 <div className="h-[38px] relative w-[38px] mb-1 rounded-full bg-slate-200 border-[2px] border-black">
                   <div className="absolute h-[41px] w-[41px] -z-10 top-[-3px] left-[-3px] rounded-full bg-gradient-to-r from-pink-500 via-purple-500 to-orange-500" />
@@ -33,7 +33,7 @@ export default function Posts() {
               <div className="font-bold tracking-widest">...</div>
             </div>
             <div className="h-[40rem] border-[1px] border-[#2d2d2d] rounded-[4px] mb-4"></div>
-            <div className="flex justify-between mb-8">
+            <div className="flex justify-between mb-8 max-[488px]:mx-3">
               <div className="flex gap-x-[1.2rem]">
                 <img src={Heart} alt="like" />
                 <img src={Comment} alt="comment" />
@@ -43,7 +43,7 @@ export default function Posts() {
                 <img src={Save} alt="Save" />
               </div>
             </div>
-            <div className="flex justify-between items-center">
+            <div className="flex justify-between items-center max-[488px]:mx-3">
               <div className="text-[13px] text-[rgb(168,168,168)]">
                 Add a comment...
               </div>

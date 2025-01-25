@@ -104,14 +104,14 @@ function MobileNavbar() {
   ];
   return (
     <>
-      <div className="h-30 fixed bottom-0 gap-y-5 bg-black px-3 border-t border-[#51515187] flex justify-evenly w-full md:hidden">
+      <div className="h-30 fixed z-[100] bottom-0 gap-y-5 bg-black px-3 border-t border-[#51515187] flex justify-evenly w-full md:hidden">
         {navLink.map((nav) => {
           return (
             <NavLink
               key={nav.text}
-              className="hover:bg-[rgba(255,255,255,0.1)] flex items-center py-4"
+              className="hover:bg-[rgba(255,255,255,0.1)] flex items-center py-4 min-w-[20px]"
             >
-              <img src={nav.img} alt="img" className="pl-3 pr-4" />
+              <img src={nav.img} alt="img" className="block pl-3 pr-4" />
             </NavLink>
           );
         })}
