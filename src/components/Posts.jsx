@@ -1,17 +1,29 @@
 import React from "react";
-import { Heart, Comment, Share, Save, EndOfPost } from "../assets";
+import {
+  Save,
+  Food,
+  Book,
+  Heart,
+  Share,
+  Comment,
+  Nothing,
+  Samsung,
+  Instagram,
+  Developer,
+  EndOfPost,
+  Technology,
+} from "../assets";
 
 export default function Posts() {
-  const [post, setPost] = React.useState([
-    { id: 1, name: "Developer" },
-    { id: 2, name: "Nothing" },
-    { id: 3, name: "Samsung" },
-    { id: 4, name: "Instagram" },
-    { id: 5, name: "Food" },
-    { id: 6, name: "Technology" },
-    { id: 7, name: "Story" },
-    { id: 8, name: "Book" },
-  ]);
+  const post = [
+    { id: 1, name: "Developer", img: Developer },
+    { id: 2, name: "Nothing", img: Nothing },
+    { id: 3, name: "Samsung", img: Samsung },
+    { id: 4, name: "Instagram", img: Instagram },
+    { id: 5, name: "Food", img: Food },
+    { id: 6, name: "Technology", img: Technology },
+    { id: 7, name: "Book", img: Book },
+  ];
   return (
     <div className="w-full flex flex-col items-center gap-y-10">
       {post.map((acc) => {
@@ -32,7 +44,9 @@ export default function Posts() {
               </div>
               <div className="font-bold tracking-widest">...</div>
             </div>
-            <div className="h-[40rem] border-[1px] border-[#2d2d2d] rounded-[4px] mb-4"></div>
+            <div className="border-[1px] border-[#2d2d2d] rounded-[4px] mb-4">
+              <img src={acc.img} alt="img" className="w-full" />
+            </div>
             <div className="flex justify-between mb-8 max-[488px]:mx-3">
               <div className="flex gap-x-[1.2rem]">
                 <img src={Heart} alt="like" />

@@ -3,8 +3,7 @@ import { Name, Search, Heart } from "../assets";
 import { Posts, SuggestedAcc } from "../components";
 
 export default function Home() {
-  const [clicked, setClicked] = React.useState(false);
-  const [story, _] = React.useState([
+  const story = [
     { id: 1, name: "Developer" },
     { id: 2, name: "Nothing" },
     { id: 3, name: "Samsung" },
@@ -13,8 +12,7 @@ export default function Home() {
     { id: 6, name: "Technology" },
     { id: 7, name: "Story" },
     { id: 8, name: "Book" },
-  ]);
-
+  ];
   return (
     <>
       <div className="w-full flex flex-col">
@@ -39,12 +37,12 @@ export default function Home() {
             <img src={Heart} alt="like" />
           </div>
         </div>
-        <div className="flex justify-center w-full overflow-hidden">
+        <div className="flex overflow-hidden justify-center w-full relative">
           <div className="flex flex-col">
             <div className="flex gap-x-5 mb-6 mt-6 justify-center max-2xl:ml-[0rem]">
               {story.map((val) => (
                 <div
-                  className="flex flex-col items-center relative hover:cursor-pointer"
+                  className="flex relative flex-col items-center shrink-0 hover:cursor-pointer"
                   key={val.id}
                 >
                   <div className="absolute h-[60px] w-[60px] -z-10 top-[-1px] rounded-full bg-gradient-to-r from-pink-500 via-purple-500 to-orange-500" />
