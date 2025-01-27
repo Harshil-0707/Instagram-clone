@@ -12,6 +12,7 @@ import {
   Explore,
   Threads,
   InstagramIcon,
+  DeveloperPfp,
 } from "../assets";
 
 const navLinkOne = [
@@ -22,7 +23,7 @@ const navLinkOne = [
   { img: Message, text: "Messages" },
   { img: Heart, text: "Notifications" },
   { img: Create, text: "Create" },
-  { img: Home, text: "Profile" },
+  { img: DeveloperPfp, text: "Profile" },
 ];
 
 const navLinkTwo = [
@@ -53,12 +54,16 @@ function DesktopNavbar() {
             return (
               <NavLink
                 key={nav.text}
-                className="hover:bg-[rgba(255,255,255,0.1)] flex items-center py-4 max-xl:flex-col"
+                className="hover:bg-[rgba(255,255,255,0.1)] rounded-[10px] flex items-center py-4 max-xl:flex-col"
               >
                 <img
                   src={nav.img}
                   alt="img"
-                  className="pl-3 pr-4 max-xl:px-2"
+                  className={`pl-3 pr-4 max-w-[54px] max-xl:px-2 ${
+                    index === 7
+                      ? "max-w-[54px] mx-3 !px-0 max-h-[24px] rounded-full"
+                      : ""
+                  }`}
                 />
                 <span
                   className={`max-xl:hidden ${
@@ -76,12 +81,12 @@ function DesktopNavbar() {
             return (
               <NavLink
                 key={nav.text}
-                className="hover:bg-[rgba(255,255,255,0.1)] rounded-md flex items-center py-4 max-xl:flex-col"
+                className="hover:bg-[rgba(255,255,255,0.1)] rounded-[10px] flex items-center py-4 max-xl:flex-col"
               >
                 <img
                   src={nav.img}
                   alt="img"
-                  className="pl-3 pr-4 max-xl:px-2"
+                  className="pl-3 pr-4 max-w-[54px] max-xl:px-2"
                 />
                 <span className="max-xl:hidden">{nav.text}</span>
               </NavLink>
@@ -100,18 +105,24 @@ function MobileNavbar() {
     { img: Reels, text: "Reels" },
     { img: Create, text: "Create" },
     { img: Message, text: "Messages" },
-    { img: Home, text: "Profile" },
+    { img: DeveloperPfp, text: "Profile" },
   ];
   return (
     <>
       <div className="h-30 fixed z-[100] bottom-0 gap-y-5 bg-black px-3 border-t border-[#51515187] flex justify-evenly w-full md:hidden">
-        {navLink.map((nav) => {
+        {navLink.map((nav, index) => {
           return (
             <NavLink
               key={nav.text}
               className="hover:bg-[rgba(255,255,255,0.1)] flex items-center py-4 min-w-[20px]"
             >
-              <img src={nav.img} alt="img" className="block pl-3 pr-4" />
+              <img
+                src={nav.img}
+                alt="img"
+                className={`block max-w-[54px] pl-3 pr-4 ${
+                  index === 5 ? "!px-0 rounded-full h-[28px]" : ""
+                }`}
+              />
             </NavLink>
           );
         })}

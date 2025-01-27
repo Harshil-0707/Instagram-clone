@@ -12,17 +12,23 @@ import {
   Developer,
   EndOfPost,
   Technology,
+  DeveloperPfp,
+  SamsungPfp,
+  InstagramPfp,
+  FoodPfp,
+  TechnologyPfp,
+  BookPfp,
 } from "../assets";
 
 export default function Posts() {
   const post = [
-    { id: 1, name: "Developer", img: Developer },
-    { id: 2, name: "Nothing", img: Nothing },
-    { id: 3, name: "Samsung", img: Samsung },
-    { id: 4, name: "Instagram", img: Instagram },
-    { id: 5, name: "Food", img: Food },
-    { id: 6, name: "Technology", img: Technology },
-    { id: 7, name: "Book", img: Book },
+    { id: 1, name: "Developer", img: Developer, pfp: DeveloperPfp },
+    { id: 2, name: "Nothing", img: Nothing, pfp: Nothing },
+    { id: 3, name: "Samsung", img: Samsung, pfp: SamsungPfp },
+    { id: 4, name: "Instagram", img: Instagram, pfp: InstagramPfp },
+    { id: 5, name: "Food", img: Food, pfp: FoodPfp },
+    { id: 6, name: "Technology", img: Technology, pfp: TechnologyPfp },
+    { id: 7, name: "Book", img: Book, pfp: BookPfp },
   ];
   return (
     <div className="w-full flex flex-col items-center gap-y-10">
@@ -34,8 +40,13 @@ export default function Posts() {
           >
             <div className="flex justify-between items-center mb-2 max-[488px]:mx-3">
               <div className="flex items-center">
-                <div className="h-[38px] relative w-[38px] mb-1 rounded-full bg-slate-200 border-[2px] border-black">
+                <div className="h-[38px] relative w-[38px] mb-1 rounded-full border-[2px] border-black">
                   <div className="absolute h-[41px] w-[41px] -z-10 top-[-3px] left-[-3px] rounded-full bg-gradient-to-r from-pink-500 via-purple-500 to-orange-500" />
+                  <img
+                    src={acc.pfp}
+                    alt="pfp"
+                    className="w-full rounded-full"
+                  />
                 </div>
                 <div className="ml-3">
                   <div className="text-sm font-semibold">{acc.name}</div>

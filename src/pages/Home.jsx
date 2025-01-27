@@ -9,7 +9,7 @@ export default function Home() {
       <div className="w-full flex flex-col">
         <HeaderNavbar />
         <div className="flex justify-center w-full relative">
-          <div className="overflow-hidden pt-6 flex flex-col">
+          <div className="overflow-hidden flex flex-col">
             <Story />
             <Posts />
           </div>
