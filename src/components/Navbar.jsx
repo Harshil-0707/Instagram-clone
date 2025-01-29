@@ -16,20 +16,20 @@ import {
 } from "../assets";
 
 const navLinkOne = [
-  { img: Home, text: "Home" },
-  { img: Search, text: "Search" },
-  { img: Explore, text: "Explore" },
-  { img: Reels, text: "Reels" },
-  { img: Message, text: "Messages" },
-  { img: Heart, text: "Notifications" },
-  { img: Create, text: "Create" },
-  { img: DeveloperPfp, text: "Profile" },
+  { img: Home, text: "Home", NavLink: "/" },
+  { img: Search, text: "Search", NavLink: "/" },
+  { img: Explore, text: "Explore", NavLink: "/" },
+  { img: Reels, text: "Reels", NavLink: "/" },
+  { img: Message, text: "Messages", NavLink: "/" },
+  { img: Heart, text: "Notifications", NavLink: "/" },
+  { img: Create, text: "Create", NavLink: "/" },
+  { img: DeveloperPfp, text: "Profile", NavLink: "/profile" },
 ];
 
 const navLinkTwo = [
-  { img: Home, text: "AI Studio" },
-  { img: Threads, text: "Threads" },
-  { img: Menu, text: "More" },
+  { img: Home, text: "AI Studio", NavLink: "/" },
+  { img: Threads, text: "Threads", NavLink: "/" },
+  { img: Menu, text: "More", NavLink: "/" },
 ];
 
 export default function Navbar() {
@@ -43,7 +43,7 @@ export default function Navbar() {
 
 function DesktopNavbar() {
   return (
-    <div className="md:sticky md:top-0 md:border-r-[1px] md:h-[100vh] max-md:h-30 flex flex-row fixed bottom-0 md:flex-col gap-y-5 md:pt-10 px-3 md:pb-9 border-[#51515187] w-[21%] max-xl:w-20 max-md:hidden max-md:w-full max-xl:items-center max-xl:justify-evenly">
+    <div className="sticky top-0 border-r-[1px] overflow-y-hidden h-[100vh] flex md:flex-col gap-y-5 md:pt-10 px-3 md:pb-9 border-[#51515187] w-[17.6%] max-xl:w-20 max-md:hidden max-md:w-full max-xl:items-center max-xl:justify-evenly">
       <div className="mb-2 px-4">
         <img src={Name} alt="icon" className="block max-xl:hidden" />
         <img src={InstagramIcon} alt="icon" className="hidden max-xl:block" />
@@ -54,6 +54,7 @@ function DesktopNavbar() {
             return (
               <NavLink
                 key={nav.text}
+                to={nav.NavLink}
                 className="hover:bg-[rgba(255,255,255,0.1)] rounded-[10px] flex items-center py-4 max-xl:flex-col"
               >
                 <img
@@ -100,12 +101,12 @@ function DesktopNavbar() {
 
 function MobileNavbar() {
   const navLink = [
-    { img: Home, text: "Home" },
-    { img: Explore, text: "Explore" },
-    { img: Reels, text: "Reels" },
-    { img: Create, text: "Create" },
-    { img: Message, text: "Messages" },
-    { img: DeveloperPfp, text: "Profile" },
+    { img: Home, text: "Home", NavLink: "/" },
+    { img: Explore, text: "Explore", NavLink: "/" },
+    { img: Reels, text: "Reels", NavLink: "/" },
+    { img: Create, text: "Create", NavLink: "/" },
+    { img: Message, text: "Messages", NavLink: "/" },
+    { img: DeveloperPfp, text: "Profile", NavLink: "/profile" },
   ];
   return (
     <>
@@ -114,6 +115,7 @@ function MobileNavbar() {
           return (
             <NavLink
               key={nav.text}
+              to={nav.NavLink}
               className="hover:bg-[rgba(255,255,255,0.1)] flex items-center py-4 min-w-[20px]"
             >
               <img
