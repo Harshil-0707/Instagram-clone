@@ -24,9 +24,12 @@ import Instagram from "./Instagram.webp";
 import Developer from "./Developer.avif";
 import SamsungPfp from "./SamsungPfp.png";
 import Technology from "./Technology.webp";
+import ProfilePosts from "./ProfilePosts.svg";
+import ProfileSaved from "./ProfileSaved.svg";
 import InstagramPfp from "./InstagramPfp.avif";
 import DeveloperPfp from "./DeveloperPfp.avif";
+import ProfileTagged from "./ProfileTagged.svg";
 import InstagramIcon from "./InstagramIcon.svg";
 import TechnologyPfp from "./TechnologyPfp.avif";
 
-export { Home, Technology, BookPfp, FoodPfp, InstagramPfp, Book, SamsungPfp, Instagram, Food, Samsung, Nothing, Name, Search, Save, Share, TechnologyPfp, Comment, Reels, Message, Menu, AIStudio, Heart, StoryPfp, Create, Explore, Developer, EndOfPost, Threads, InstagramIcon, DeveloperPfp };
+export { Home, Technology, BookPfp, ProfileSaved, FoodPfp, InstagramPfp, Book, SamsungPfp, Instagram, Food, Samsung, Nothing, Name, Search, Save, Share, TechnologyPfp, Comment, Reels, ProfileTagged, Message, Menu, AIStudio, Heart, StoryPfp, Create, Explore, Developer, EndOfPost, Threads, InstagramIcon, DeveloperPfp, ProfilePosts };
