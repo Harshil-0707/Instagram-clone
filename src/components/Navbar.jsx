@@ -43,10 +43,14 @@ export default function Navbar() {
 
 function DesktopNavbar() {
   return (
-    <div className="sticky top-0 border-r-[1px] overflow-y-hidden h-[100vh] flex md:flex-col gap-y-5 md:pt-10 px-3 md:pb-9 border-[#51515187] w-[17.6%] max-xl:w-20 max-md:hidden max-md:w-full max-xl:items-center max-xl:justify-evenly">
-      <div className="mb-2 px-4">
-        <img src={Name} alt="icon" className="block max-xl:hidden" />
-        <img src={InstagramIcon} alt="icon" className="hidden max-xl:block" />
+    <div className="sticky top-0 border-r-[1px] overflow-y-hidden h-[100vh] flex md:flex-col gap-y-5 md:pt-10 px-3 md:pb-9 border-[#51515187] w-[17.6%] max-xl:w-20 max-[840px]:hidden max-md:w-full max-xl:items-center max-xl:justify-evenly">
+      <div className="mb-1">
+        <img src={Name} alt="icon" className="px-4 block max-xl:hidden" />
+        <img
+          src={InstagramIcon}
+          alt="icon"
+          className="hidden !w-[2rem] !h-[1.5rem] max-xl:block"
+        />
       </div>
       <div className="h-full flex flex-col justify-between  max-md:flex-row">
         <div className="flex flex-col max-md:flex-row">
@@ -110,7 +114,7 @@ function MobileNavbar() {
   ];
   return (
     <>
-      <div className="h-30 fixed z-[100] bottom-0 gap-y-5 bg-black px-3 border-t border-[#51515187] flex justify-evenly w-full md:hidden">
+      <div className="h-30 fixed z-[100] hidden bottom-0 gap-y-5 bg-black px-3 border-t border-[#51515187] justify-evenly w-full max-[840px]:flex">
         {navLink.map((nav, index) => {
           return (
             <NavLink

@@ -1,5 +1,6 @@
 import React from "react";
 import {
+  Camera,
   DeveloperPfp,
   ProfilePosts,
   ProfileSaved,
@@ -16,21 +17,21 @@ export default function Profile() {
   ];
   return (
     <>
-      <div className="text-white h-[100dvh] flex flex-col">
-        <div className="pt-8 flex flex-col gap-y-14 mt-3">
-          <div className="flex ml-[10rem] gap-x-20">
-            <div className="w-[40%] ml-[2rem]">
-              <div className="relative mt-4">
+      <div className="text-white flex flex-col mx-[10%] w-[84dvw] max-xl:!w-[100dvw]">
+        <div className="pt-8 flex flex-col items-center gap-y-14 mt-3">
+          <div className="flex gap-x-20">
+            <div className="w-[30%] flex justify-end">
+              <div className="relative mt-4 w-[9rem]">
                 <img
                   src={DeveloperPfp}
                   alt="img"
-                  className="h-[9rem] w-full rounded-full"
+                  className="h-[9rem] w-[9rem] rounded-full"
                 />
-                <div className="absolute text-[12px] text-[#c7c7c7] rounded-xl py-3 px-2 top-[-20px] right-[80px] bg-[rgb(74,74,74)]">
+                <div className="absolute text-[12px] text-[#c7c7c7] rounded-xl py-3 px-2 top-[-30px] left-[35px] bg-[rgb(74,74,74)]">
                   Note...
                 </div>
-                <div className="absolute top-[16px] left-[35px] h-3 w-3 rounded-full bg-[rgb(74,74,74)]" />
-                <div className="absolute rounded-full bg-[rgb(75,75,75)] left-[43px] h-2 w-2 top-[28px]" />
+                <div className="absolute top-[7px] left-[45px] h-3 w-3 rounded-full bg-[rgb(74,74,74)]" />
+                <div className="absolute rounded-full bg-[rgb(75,75,75)] left-[50px] h-2 w-2 top-[17px]" />
               </div>
             </div>
             <div className="flex flex-col w-full gap-y-5">
@@ -62,36 +63,36 @@ export default function Profile() {
               </div>
             </div>
           </div>
-          <div className="relative ml-[10rem] w-[110%]">
-            <div>
-              <div className="h-[83px] w-[83px] rounded-full bg-[#181818] border-[2px] border-black"></div>
-              <div className="absolute top-[-2px] left-[-2px] -z-30 h-[87px] w-[87px] bg-[#5f5f5f8e] rounded-full" />
-              <div className="text-sm ml-6 mt-2">New</div>
-            </div>
+          <div className="relative max-w-[40rem] w-full min-w-[50%]">
+            <div className="h-[83px] w-[83px] rounded-full bg-[#181818] border-[2px] border-black"></div>
+            <div className="absolute top-[-2px] left-[-2px] -z-30 h-[87px] w-[87px] bg-[#5f5f5f8e] rounded-full" />
+            <div className="text-sm ml-6 mt-2">New</div>
           </div>
-          <div className="w-[120%] ml-[7rem] border-b-[1px] border-[#202020]" />
+          <div className="min-w-[30rem] w-full max-w-[70%] mx-auto border-b-[1px] border-[#202020]" />
         </div>
-        <div className="ml-[16rem] flex flex-col items-center">
-          {/* Bottom */}
-          <div className="flex justify-center w-[50%] text-[14px] font-bold tracking-wide">
+        <div className="max-md:w-full flex flex-col items-center">
+          <div className="flex justify-center w-[30%] text-[14px] font-bold tracking-wide">
             {tabs.map((tab) => (
-              <div key={tab.label} className="flex">
+              <div key={tab.label} className="w-full flex mx-[2rem]">
                 <button
                   onClick={() => setActiveTab(tab.label)}
-                  className={`w-full mx-[2rem] flex justify-center gap-2 py-4 relative ${
+                  className={`w-[3rem] flex justify-center gap-2 py-4 relative ${
                     activeTab === tab.label ? "text-white" : "text-neutral-500"
                   }`}
                 >
-                  {/* <img src={tab.icon} alt="img" /> */}
+                  <img src={tab.icon} alt="img" className="w-[16px]" />
                   <span className="text-xs font-medium tracking-wider">
                     {tab.label}
                   </span>
                   {activeTab === tab.label && (
-                    <div className="absolute top-0 left-0 w-full h-[1px] bg-white" />
+                    <div className="absolute top-0 left-[-8px] w-[140%] h-[1px] bg-white" />
                   )}
                 </button>
               </div>
             ))}
+          </div>
+          <div className="mt-[3.5rem] mb-[1.5rem]">
+            <img src={Camera} alt="camera" />
           </div>
           <div className="font-bold text-[2rem]">Share Photos</div>
           <div className="text-sm my-[1rem]">
