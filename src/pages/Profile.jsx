@@ -7,6 +7,7 @@ import {
   ProfileTagged,
 } from "../assets";
 import { Link } from "react-router-dom";
+import { Plus, Settings } from "lucide-react";
 
 export default function Profile() {
   const [activeTab, setActiveTab] = React.useState("POSTS");
@@ -17,7 +18,7 @@ export default function Profile() {
   ];
   return (
     <>
-      <div className="text-white flex flex-col mx-[10%] w-[84dvw] max-xl:!w-[100dvw]">
+      <div className="text-white flex flex-col md:mx-[10%] w-[61dvw] max-xl:!w-[100dvw]">
         <div className="pt-8 flex flex-col items-center gap-y-14 mt-3">
           <div className="flex gap-x-20">
             <div className="w-[30%] flex justify-end">
@@ -35,15 +36,17 @@ export default function Profile() {
               </div>
             </div>
             <div className="flex flex-col w-full gap-y-5">
-              <div className="flex w-full gap-x-3">
+              <div className="flex w-full items-center gap-x-3">
                 <div className="text-xl mr-2">Developer</div>
-                <button className="bg-[#3f3f3f] w-[7rem] text-sm font-semibold px-3 rounded-lg">
+                <button className="focus:outline-none h-[1.8rem] bg-[#3f3f3f] w-[7rem] text-sm font-semibold px-3 rounded-lg">
                   Edit profile
                 </button>
-                <button className="bg-[#3f3f3f] w-[7rem] text-sm font-semibold rounded-lg">
+                <button className="focus:outline-none h-[1.8rem] bg-[#3f3f3f] w-[7rem] text-sm font-semibold rounded-lg">
                   View archive
                 </button>
-                <div></div>
+                <div>
+                  <Settings />
+                </div>
               </div>
               <div className="flex gap-x-8">
                 <div className="text-[16px]">
@@ -63,12 +66,14 @@ export default function Profile() {
               </div>
             </div>
           </div>
-          <div className="relative max-w-[40rem] w-full min-w-[50%]">
-            <div className="h-[83px] w-[83px] rounded-full bg-[#181818] border-[2px] border-black"></div>
+          <div className="relative ml-4 max-w-[39rem] w-full min-w-[50%]">
+            <div className="flex justify-center items-center h-[83px] w-[83px] rounded-full bg-[#181818] border-[2px] border-black">
+              <Plus className="h-[3rem] w-[3rem] text-[#6f6f6f]" />
+            </div>
             <div className="absolute top-[-2px] left-[-2px] -z-30 h-[87px] w-[87px] bg-[#5f5f5f8e] rounded-full" />
             <div className="text-sm ml-6 mt-2">New</div>
           </div>
-          <div className="min-w-[30rem] w-full max-w-[70%] mx-auto border-b-[1px] border-[#202020]" />
+          <div className="w-full border-b-[1px] border-[#202020]" />
         </div>
         <div className="max-md:w-full flex flex-col items-center">
           <div className="flex justify-center w-[30%] text-[14px] font-bold tracking-wide">
@@ -76,7 +81,7 @@ export default function Profile() {
               <div key={tab.label} className="w-full flex mx-[2rem]">
                 <button
                   onClick={() => setActiveTab(tab.label)}
-                  className={`w-[3rem] flex justify-center gap-2 py-4 relative ${
+                  className={`w-[3rem] focus:outline-none flex justify-center gap-2 py-4 relative ${
                     activeTab === tab.label ? "text-white" : "text-neutral-500"
                   }`}
                 >
@@ -98,7 +103,10 @@ export default function Profile() {
           <div className="text-sm my-[1rem]">
             When you share photos, they will appear on your profile.
           </div>
-          <Link to="/profile" className="text-sm text-blue-500 font-bold">
+          <Link
+            to="/profile"
+            className="focus:outline-none text-sm text-blue-500 font-bold"
+          >
             Share your first photo
           </Link>
         </div>

@@ -17,19 +17,19 @@ import {
 
 const navLinkOne = [
   { img: Home, text: "Home", NavLink: "/" },
-  { img: Search, text: "Search", NavLink: "/" },
-  { img: Explore, text: "Explore", NavLink: "/" },
-  { img: Reels, text: "Reels", NavLink: "/" },
-  { img: Message, text: "Messages", NavLink: "/" },
-  { img: Heart, text: "Notifications", NavLink: "/" },
-  { img: Create, text: "Create", NavLink: "/" },
+  { img: Search, text: "Search", NavLink: "/search" },
+  { img: Explore, text: "Explore", NavLink: "/explore" },
+  { img: Reels, text: "Reels", NavLink: "/reels" },
+  { img: Message, text: "Messages", NavLink: "/messages" },
+  { img: Heart, text: "Notifications", NavLink: "/notifications" },
+  { img: Create, text: "Create", NavLink: "/create" },
   { img: DeveloperPfp, text: "Profile", NavLink: "/profile" },
 ];
 
 const navLinkTwo = [
-  { img: Home, text: "AI Studio", NavLink: "/" },
-  { img: Threads, text: "Threads", NavLink: "/" },
-  { img: Menu, text: "More", NavLink: "/" },
+  { img: Home, text: "AI Studio", NavLink: "/aistudio" },
+  { img: Threads, text: "Threads", NavLink: "/threads" },
+  { img: Menu, text: "More", NavLink: "/more" },
 ];
 
 export default function Navbar() {
@@ -59,7 +59,11 @@ function DesktopNavbar() {
               <NavLink
                 key={nav.text}
                 to={nav.NavLink}
-                className="hover:bg-[rgba(255,255,255,0.1)] rounded-[10px] flex items-center py-4 max-xl:flex-col"
+                className={({ isActive }) =>
+                  `hover:bg-[rgba(255,255,255,0.1)] rounded-[10px] flex items-center py-4 max-xl:flex-col focus:outline-none ${
+                    isActive ? "font-bold" : "font-normal"
+                  }`
+                }
               >
                 <img
                   src={nav.img}
@@ -70,13 +74,7 @@ function DesktopNavbar() {
                       : ""
                   }`}
                 />
-                <span
-                  className={`max-xl:hidden ${
-                    index === 0 ? "font-bold" : "font-normal"
-                  }`}
-                >
-                  {nav.text}
-                </span>
+                <span className="max-xl:hidden inline-block">{nav.text}</span>
               </NavLink>
             );
           })}
@@ -86,14 +84,19 @@ function DesktopNavbar() {
             return (
               <NavLink
                 key={nav.text}
-                className="hover:bg-[rgba(255,255,255,0.1)] rounded-[10px] flex items-center py-4 max-xl:flex-col"
+                to={nav.NavLink}
+                className={({ isActive }) =>
+                  `hover:bg-[rgba(255,255,255,0.1)] rounded-[10px] flex items-center py-4 max-xl:flex-col focus:outline-none ${
+                    isActive ? "font-bold" : "font-normal"
+                  }`
+                }
               >
                 <img
                   src={nav.img}
                   alt="img"
                   className="pl-3 pr-4 max-w-[54px] max-xl:px-2"
                 />
-                <span className="max-xl:hidden">{nav.text}</span>
+                <span className="max-xl:hidden inline-block">{nav.text}</span>
               </NavLink>
             );
           })}
@@ -105,7 +108,7 @@ function DesktopNavbar() {
 
 function MobileNavbar() {
   const navLink = [
-    { img: Home, text: "Home", NavLink: "/" },
+    { img: Home, text: "Home", NavLink: "/home" },
     { img: Explore, text: "Explore", NavLink: "/" },
     { img: Reels, text: "Reels", NavLink: "/" },
     { img: Create, text: "Create", NavLink: "/" },
@@ -120,7 +123,10 @@ function MobileNavbar() {
             <NavLink
               key={nav.text}
               to={nav.NavLink}
-              className="hover:bg-[rgba(255,255,255,0.1)] flex items-center py-4 min-w-[20px]"
+              className={({ isActive }) =>
+                `${isActive ? "font-bold" : "font-normal"}
+              hover:bg-[rgba(255,255,255,0.1)] flex items-center py-4 min-w-[20px]`
+              }
             >
               <img
                 src={nav.img}
