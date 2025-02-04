@@ -1,7 +1,7 @@
 import React from "react";
 import { Name, Search, Heart } from "../assets";
 
-export default function HeaderNavbar() {
+export default function HomeHeaderNavbar() {
   return (
     <div className="md:hidden sticky z-[60] top-0 h-[60px] px-5 bg-black border-b border-[#51515187] w-full overflow-hidden flex items-center">
       <div className="mt-1 max-[368px]:hidden">
