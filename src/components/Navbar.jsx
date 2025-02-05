@@ -125,7 +125,7 @@ function MobileNavbar() {
               to={nav.NavLink}
               className={({ isActive }) =>
                 `${isActive ? "font-bold" : "font-normal"}
-              hover:bg-[rgba(255,255,255,0.1)] flex items-center py-4 min-w-[20px]`
+              hover:bg-[rgba(255,255,255,0.1)] focus:bg-black flex items-center py-4 min-w-[20px]`
               }
             >
               <img
