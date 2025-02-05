@@ -20,16 +20,16 @@ export default function ProfileBottomSection() {
             >
               <div
                 onClick={() => setActiveTab(tab.label)}
-                className={`w-[4rem] mx-6 max-[735px]:mx-0 focus:outline-none flex justify-center gap-2 py-4 relative ${
+                className={`w-[4rem] max-[768px]:mx-0 mx-6 max-[735px]:mx-0 focus:outline-none flex justify-center gap-2 py-4 relative ${
                   activeTab === tab.label ? "text-white" : "text-neutral-500"
                 }`}
               >
                 <img
                   src={tab.icon}
                   alt="img"
-                  className="w-[16px] max-[375px]:w-[40%]"
+                  className="w-[16px] inline-block max-[768px]:!w-[30px]"
                 />
-                <div className="text-xs max-[375px]:hidden font-medium tracking-wider">
+                <div className="text-xs max-[768px]:hidden font-medium tracking-wider">
                   {tab.label}
                 </div>
               </div>

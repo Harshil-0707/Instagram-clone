@@ -13,7 +13,7 @@ export default function ProfileTopSection() {
 
 function Desktop() {
   return (
-    <div className="max-[768px]:hidden pt-8 flex flex-col items-center gap-y-14 mt-3">
+    <div className="max-[768px]:hidden pt-8 flex flex-col items-center gap-y-14 mt-[1rem]">
       <div className="flex gap-x-20">
         <div className="w-[30%] flex justify-end">
           <div className="relative mt-4 w-[9rem]">
@@ -74,7 +74,7 @@ function Desktop() {
 
 function Mobile() {
   return (
-    <div className="max-[768px]:flex pt-8 hidden flex-col gap-y-4 mt-[5rem]">
+    <div className="max-[768px]:flex max-[768px]:pt-0 pt-8 hidden flex-col gap-y-4 mt-[6rem]">
       <div className="flex flex-col gap-y-5">
         <div className="flex ml-[0.6rem]">
           <div>
@@ -98,7 +98,7 @@ function Mobile() {
                 <Settings />
               </div>
               <div className="flex gap-x-2 mr-3">
-                <button className="focus:outline-none bg-[#3f3f3f] h-full max-w-[7rem] text-[0.88rem] font-semibold px-3 rounded-lg">
+                <button className="focus:outline-none bg-[#3f3f3f] h-full py-1 max-w-[7rem] text-[0.88rem] font-semibold px-3 rounded-lg">
                   Edit profile
                 </button>
                 <button className="focus:outline-none h-full bg-[#3f3f3f] max-w-[7rem] text-[0.88rem] font-semibold px-3 rounded-lg">
@@ -106,17 +106,6 @@ function Mobile() {
                 </button>
               </div>
             </div>
-            {/* <div className="flex gap-x-8">
-            <div className="text-[16px]">
-              <span className="text-white font-bold">0</span> posts
-            </div>
-            <div className="text-[16px]">
-              <span className="text-white font-bold">3k</span> followers
-            </div>
-            <div className="text-[16px]">
-              <span className="text-white font-bold">120</span> following
-            </div>
-          </div> */}
           </div>
         </div>
         <div className="ml-4">
@@ -131,6 +120,17 @@ function Mobile() {
         </div>
         <div className="absolute top-[-2px] left-[-2px] -z-30 h-[64px] w-[64px] bg-[#5f5f5f8e] rounded-full" />
         <div className="text-xs text-[#d6d6d6] ml-3 mt-2">New</div>
+      </div>
+      <div className="flex  w-full pt-3 text-center border-t-[1px] border-t-[#414141] text-[rgb(168,168,168)]">
+        <div className="text-[15px] w-full">
+          <span className="text-white font-bold block">0</span> posts
+        </div>
+        <div className="text-[15px] w-full">
+          <span className="text-white font-bold block">3k</span> followers
+        </div>
+        <div className="text-[15px] w-full">
+          <span className="text-white font-bold block">120</span> following
+        </div>
       </div>
       <div className="w-full border-b-[1px] border-[#414141]" />
     </div>
